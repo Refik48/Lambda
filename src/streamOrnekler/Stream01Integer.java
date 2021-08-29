@@ -48,6 +48,7 @@ public class Stream01Integer {
     public static void yazdır(int x){
         System.out.print( x + " ");
     }
+
     //Stream api de pupeline de islemler lazy'dir.
 //Cunku arkadan gelecek islemlerin durumu degisebileceginden dolayi.
 //Terminal islemleri eager'dir.Yazilmazsa calismaz
