@@ -23,11 +23,22 @@ public class Stream01Integer_Tekrar {
         rakamlar.stream().filter(t->t%2==0).forEach(Stream01Integer_Tekrar::yazdir);
         System.out.println("\n ==== TEK SAYILAR ===");
         rakamlar.stream().filter(Stream01Integer_Tekrar::tekMi).forEach(Stream01Integer_Tekrar::yazdir);
+        System.out.println("\n ==== CIFT SAYILAR(METHOD) ===");
+        ciftleriYazdir(rakamlar);
 
 
     }
+    public static void ciftleriYazdir(List<Integer> liste){
+     //   liste.stream().filter(x->x%2==0).forEach(x-> System.out.print(x + " "));
+ liste.stream().filter(Stream01Integer_Tekrar::ciftMi).forEach(System.out::print);
+    }
+
     public static boolean tekMi(int x){
         return x % 2 !=0 ;
+    }
+
+    public static boolean ciftMi(int x){
+        return x%2==0;
     }
 
 
